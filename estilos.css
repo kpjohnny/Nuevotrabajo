@@ -1,0 +1,49 @@
+/*el *=selector universal*/
+*{
+	margin: 0;/*todos los elementos margin y padding 0*/
+	padding: 0;
+}
+body{
+	background: #e6e6e6;
+}
+header, .main, footer
+{
+	background: #3498DB;
+	width: 50%;/*se adapta al 90% de la pantalla (responsive); se podria color 1000px pero no se adpatara*/
+	max-width: 200px;/*lo que esta en blanco max 1000px para que se angoste*/
+	margin: 30px auto;/*20px arriba-abajo y lo centraee el contenido*/
+	font-size: 26px;
+}
+/*overflow:hidden=1. permite ocultar el contenido que sobrepasa un contenedor*/
+/*2. limpia los float-left */
+header nav{
+	background:#0000FF; /*menu de color celeste*/
+	overflow: hidden;/*AQUI*/
+}
+header nav ul{
+	list-style: none;/*quitar vineta*/
+}
+header nav ul li{
+	float: left;/*el menu uno al lado de otro y se alineen a la izq (se quita el color celeste del nav-la solucion colocar un overflow:hidden en el header nav)*/	
+}
+/*caracteristicas de los hipervinculos*/
+header nav ul li a{
+	padding: 30px 20px;/*10px=margen arriba-abajo; 20px=margen izq-der*/
+	display: block;/*permite tener un padding arriba-abajo; sino se coloca solo tendra padding a los lados*/
+	color: #EFFBFB;/*color del texto blanco*/
+	text-decoration: none;/*para quitarle el subrayado al hipervinculo*/
+}
+
+header nav ul li a:hover{
+	background: #75ACEC;/*cambia a color celeste el hipervinculo cuando el mouse esta sobre el*/
+}
+
+
+footer{
+	background: #000;
+	color:#fff;/*hasta aqui el footer esta debajo del aside*/
+	clear:both;/*limpiar a partir de aqui los float-left () con un salto de linea*/
+	padding: 20px 20px;/*10px=arriba-abajo;20px=izq-der*/
+	text-align: center;/*centrar el texto*/
+
+}
